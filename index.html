@@ -56,7 +56,7 @@
 										<h3>Ganyos</h3>
 									</div>
 									<div class="agileits_w3layouts_more">
-										<a href="https://open.spotify.com/artist/2z2CemzRxlas1jnSzVmHhw" target='_blank'>Listen <i class="fa fa-spotify" aria-hidden="true"></i></a>
+										<a href="https://soundcloud.com/ganyosmusic" target='_blank'>Listen <i class="fa fa-soundcloud" aria-hidden="true"></i></a>
 									</div>
 								</li>
 							</ul>
@@ -211,9 +211,12 @@
 	<div class="container">
 	<div class="login-form banner-posit">
 				<!-- <h3>Contact Us</h3> -->
-				<form action="#" method="post">
-					<input type="text"  name="Name" placeholder="Name" required="" />
-					<input type="email"  name="Email" placeholder="Email" required="" />
+				<form action="#" method="post" netlify-honeypot="bot-field" netlify>
+					<p class="hidden">
+						<label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+					</p>
+					<input type="text"  name="name" placeholder="Name" required="" />
+					<input type="email"  name="email" placeholder="Email" required="" />
 					<!-- <h3 class="w3ls-h3">Contact</h3> -->
 					<div class="clearfix"></div>
 					<textarea name="message"  placeholder="Body" rows="4" cols="50"></textarea>
@@ -236,10 +239,10 @@
 			</div>
 			<div class="col-md-3 w3l-social">
 				<ul class="top-right-info-w3ls">
-					<li><a href="https://www.facebook.com/" target='_blank'><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="https://twitter.com/?lang=en" target='_blank'><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="https://open.spotify.com/artist/2z2CemzRxlas1jnSzVmHhw" target='_blank'><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.instagram.com/ganyos.wav" target='_blank'><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<!-- <li><a href="https://www.facebook.com/" target='_blank'><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
+					<li><a href="https://twitter.com/ganyosmusic" target='_blank'><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="https://soundcloud.com/ganyosmusic" target='_blank'><i class="fa fa-soundcloud" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.instagram.com/ganyosmusic/" target='_blank'><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
@@ -281,14 +284,8 @@
 		});
 
 	</script>
-	<script src="js/jquery..min.js"></script>
-	<script type="text/javascript">
-			jQuery(function($) {
-				$(".").();
-			});
-	</script>
-	<!-- //swipe box js -->
-<!-- flexisel -->
+	<script src="js/jquery.min.js"></script>
+
 	<script type="text/javascript">
 			$(window).load(function() {
 				$("#flexiselDemo1").flexisel({
@@ -313,41 +310,18 @@
 						}
 					}
 				});
-
 			});
 	</script>
 	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-<!-- //flexisel -->
-	<!-- <script type="text/javascript" src="js/move-top.js"></script> -->
 	<script type="text/javascript" src="js/easing.js"></script>
-	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-				};
-			*/
-
-			$().UItoTop({ easingType: 'easeOutQuart' });
-
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 			});
-	</script>
-<!-- //here ends scrolling icon -->
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
-	});
-</script>
-
+	</script>
 	<script src="js/SmoothScroll.min.js"></script>
-
-
 </body>
 </html>
